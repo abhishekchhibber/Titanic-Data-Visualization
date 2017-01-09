@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Visualization of Titanic dataset - Abhishek Chhibber</title>
+  
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+  
+</head>
+
+<!--This is the initial HTML file that I have prepared from the the Titanic dataset.
+I have considered the four ordered features (Sex, Passenger Class, Port of Embarkation and survival),
+and tried to find relationship between them.
+-->
+
+<!--I have done the JavaScript coding in this HTML only, and have used external hosted sources 
+for calling d3js and dimplsjs files and datasets - so that this HML file can be viewed independently, 
+without copying/dowloading any other file.
+-->
+
+<body>
+
+
+
+<h1>Visualization of Titanic Dataset</h1>
+
+<!--1) Relation between passengers' survival and booking class...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg1 = dimple.newSvg("#chartContainer", 590, 400);    
+	d3.tsv("https://docs.google.com/spreadsheets/d/1nNUTg9bOodkAR37OVnNEO1-j4jjSd0b5KKPaxZ_eVC4/pub?gid=332686086&single=true&output=tsv", function (data) {
+      var myChart = new dimple.chart(svg1, data);
+      myChart.setBounds(60, 30, 510, 330)
+      myChart.addCategoryAxis("x", ["Survived"]);
+      myChart.addMeasureAxis("y", "Passengers");
+      myChart.addSeries("Pclass", dimple.plot.bar);
+      myChart.addLegend(65, 10, 510, 20, "right");
+      myChart.draw();
+    });	
+  </script>
+</div>
+
+
+
+
+<!--2) Relation between passengers' survival and their sex...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg2 = dimple.newSvg("#chartContainer", 590, 400);    
+	d3.tsv("https://docs.google.com/spreadsheets/d/1nNUTg9bOodkAR37OVnNEO1-j4jjSd0b5KKPaxZ_eVC4/pub?gid=1713581912&single=true&output=tsv", function (data) {
+      var myChart = new dimple.chart(svg2, data);
+      myChart.setBounds(60, 30, 510, 330)
+      myChart.addCategoryAxis("x", ["Survived"]);
+      myChart.addMeasureAxis("y", "Passengers");
+      myChart.addSeries("Sex", dimple.plot.bar);
+      myChart.addLegend(65, 10, 510, 20, "right");
+      myChart.draw();
+    });	
+  </script>
+</div>
+
+
+
+
+<!--3) Relation between passengers' survival and port of embarkation...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg3 = dimple.newSvg("#chartContainer", 590, 400);    
+	d3.tsv("https://docs.google.com/spreadsheets/d/1nNUTg9bOodkAR37OVnNEO1-j4jjSd0b5KKPaxZ_eVC4/pub?gid=1651186736&single=true&output=tsv", function (data) {
+      var myChart = new dimple.chart(svg3, data);
+      myChart.setBounds(60, 30, 510, 330)
+      myChart.addCategoryAxis("x", ["Survived"]);
+      myChart.addMeasureAxis("y", "Passengers");
+      myChart.addSeries("Embarked", dimple.plot.bar);
+      myChart.addLegend(65, 10, 510, 20, "right");
+      myChart.draw();
+    });	
+  </script>
+</div>
+
+
+
+<!--4) Relation between passengers' booking class and their sex...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg4 = dimple.newSvg("#chartContainer", 590, 400);    
+	d3.tsv("https://docs.google.com/spreadsheets/d/1nNUTg9bOodkAR37OVnNEO1-j4jjSd0b5KKPaxZ_eVC4/pub?gid=1370944759&single=true&output=tsv", function (data) {
+      var myChart = new dimple.chart(svg4, data);
+      myChart.setBounds(60, 30, 510, 330)
+      myChart.addCategoryAxis("x", ["Pclass"]);
+      myChart.addMeasureAxis("y", "Passengers");
+      myChart.addSeries("Sex", dimple.plot.bar);
+      myChart.addLegend(65, 10, 510, 20, "right");
+      myChart.draw();
+    });	
+  </script>
+</div>
+
+
+
+
+<!--5) Relation between passengers' booking class and port of embarkation...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg5 = dimple.newSvg("#chartContainer", 590, 400);    
+	d3.tsv("https://docs.google.com/spreadsheets/d/1nNUTg9bOodkAR37OVnNEO1-j4jjSd0b5KKPaxZ_eVC4/pub?gid=2000196094&single=true&output=tsv", function (data) {
+      var myChart = new dimple.chart(svg5, data);
+      myChart.setBounds(60, 30, 510, 330)
+      myChart.addCategoryAxis("x", ["Pclass"]);
+      myChart.addMeasureAxis("y", "Passengers");
+      myChart.addSeries("Embarked", dimple.plot.bar);
+      myChart.addLegend(65, 10, 510, 20, "right");
+      myChart.draw();
+    });	
+  </script>
+</div>
+
+
+
+
+<!--6) Relation between passengers' sex and port of embarkation...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg6 = dimple.newSvg("#chartContainer", 590, 400);    
+	d3.tsv("https://docs.google.com/spreadsheets/d/1nNUTg9bOodkAR37OVnNEO1-j4jjSd0b5KKPaxZ_eVC4/pub?gid=0&single=true&output=tsv", function (data) {
+      var myChart = new dimple.chart(svg6, data);
+      myChart.setBounds(60, 30, 510, 330)
+      myChart.addCategoryAxis("x", ["Embarked"]);
+      myChart.addMeasureAxis("y", "Passengers");
+      myChart.addSeries("Sex", dimple.plot.bar);
+      myChart.addLegend(65, 10, 510, 20, "right");
+      myChart.draw();
+    });	
+  </script>
+</div>
+
+
+
+
+
+</body>
+</html>
