@@ -8,7 +8,7 @@ In this project, I have tried to analyze the Titanic dataset, based on the follo
 * Sex: Male, Female
 * Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampton
 
-I have tried to understand the relationship among all the four categorical features. [Link to the dataset]() 
+I have tried to understand the relationship among all the four categorical features. [Link to the dataset](https://www.udacity.com/api/nodes/5420148578/supplemental_media/titanic-datacsv/download) 
 
 
 
