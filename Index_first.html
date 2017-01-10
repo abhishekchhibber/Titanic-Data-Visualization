@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Visualization of Titanic dataset - Abhishek Chhibber</title>
+  
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+  
+</head>
+
+<!--This is the initial HTML file that I have prepared from the the Titanic dataset.
+I have considered the four ordered features (Sex, Passenger Class, Port of Embarkation and survival),
+and tried to find relationship between them.
+-->
+
+<!--I have done the JavaScript coding in this HTML only, and have used external hosted sources 
+for calling d3js and dimplsjs files and datasets - so that this HML file can be viewed independently, 
+without copying/dowloading any other file.
+-->
+
+<body>
+
+
+
+<h1>Visualization of Titanic Dataset</h1>
+
+<!--1) Relation between passengers' survival and booking class...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg1 = dimple.newSvg("#chartContainer", 590, 400);    
+	var data1 = [
+	{"Survived" : 0, "Pclass": 1, "Passengers" : 80	},
+	{"Survived" : 0, "Pclass": 2, "Passengers" : 97	},
+	{"Survived" : 0, "Pclass": 3, "Passengers" : 372	},
+	{"Survived" : 1, "Pclass": 1, "Passengers" : 136	},
+	{"Survived" : 1, "Pclass": 2, "Passengers" : 87	},
+	{"Survived" : 1, "Pclass": 3, "Passengers" : 119	},
+	];
+		
+      var myChart1 = new dimple.chart(svg1, data1);
+      myChart1.setBounds(60, 30, 510, 330)
+      myChart1.addCategoryAxis("x", ["Survived"]);
+      myChart1.addMeasureAxis("y", "Passengers");
+      myChart1.addSeries("Pclass", dimple.plot.bar);
+      myChart1.addLegend(65, 10, 510, 20, "right");
+	  myChart1.ease = "bounce";
+	  myChart1.staggerDraw = true;
+      myChart1.draw(1000);
+    
+  </script>
+</div>
+
+
+
+
+<!--2) Relation between passengers' survival and their sex...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg2 = dimple.newSvg("#chartContainer", 590, 400);    
+	var data2 = [
+	{"Survived" : 0, "Sex": "female", "Passengers" : 81	},
+	{"Survived" : 0, "Sex": "male", "Passengers" : 468	},
+	{"Survived" : 1, "Sex": "female", "Passengers" : 233	},
+	{"Survived" : 1, "Sex": "male", "Passengers" : 109	},
+
+	];
+	
+		
+      var myChart2 = new dimple.chart(svg2, data2);
+      myChart2.setBounds(60, 30, 510, 330)
+      myChart2.addCategoryAxis("x", ["Survived"]);
+      myChart2.addMeasureAxis("y", "Passengers");
+      myChart2.addSeries("Sex", dimple.plot.bar);
+      myChart2.addLegend(65, 10, 510, 20, "right");
+	  myChart2.ease = "bounce";
+	  myChart2.staggerDraw = true;
+      myChart2.draw(1000);
+    
+  </script>
+</div>
+
+
+
+
+<!--3) Relation between passengers' survival and port of embarkation...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg3 = dimple.newSvg("#chartContainer", 590, 400);    
+	var data3 = [
+	{"Survived" : 0, "Embarked": "C", "Passengers" : 75	},
+	{"Survived" : 0, "Embarked": "Q", "Passengers" : 47	},
+	{"Survived" : 0, "Embarked": "S", "Passengers" : 427	},
+	{"Survived" : 1, "Embarked": "C", "Passengers" : 93	},
+	{"Survived" : 1, "Embarked": "Q", "Passengers" : 30	},
+	{"Survived" : 1, "Embarked": "S", "Passengers" : 217	},
+	];  
+	  
+	  var myChart3 = new dimple.chart(svg3, data3);
+      myChart3.setBounds(60, 30, 510, 330)
+      myChart3.addCategoryAxis("x", ["Survived"]);
+      myChart3.addMeasureAxis("y", "Passengers");
+      myChart3.addSeries("Embarked", dimple.plot.bar);
+      myChart3.addLegend(65, 10, 510, 20, "right");
+	  myChart3.ease = "bounce";
+	  myChart3.staggerDraw = true;
+      myChart3.draw(1000);
+    	
+  </script>
+</div>
+
+
+
+<!--4) Relation between passengers' booking class and their sex...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg4 = dimple.newSvg("#chartContainer", 590, 400);    
+	var data4 = [
+	{"Pclass" : 1, "Sex": "female", "Passengers" : 94	},
+	{"Pclass" : 1, "Sex": "male", "Passengers" : 122	},
+	{"Pclass" : 2, "Sex": "female", "Passengers" : 76	},
+	{"Pclass" : 2, "Sex": "male", "Passengers" : 108	},
+	{"Pclass" : 3, "Sex": "female", "Passengers" : 144	},
+	{"Pclass" : 3, "Sex": "male", "Passengers" : 347	},
+	];  
+		
+	  var myChart4 = new dimple.chart(svg4, data4);
+      myChart4.setBounds(60, 30, 510, 330)
+      myChart4.addCategoryAxis("x", ["Pclass"]);
+      myChart4.addMeasureAxis("y", "Passengers");
+      myChart4.addSeries("Sex", dimple.plot.bar);
+      myChart4.addLegend(65, 10, 510, 20, "right");
+	  myChart4.ease = "bounce";
+	  myChart4.staggerDraw = true;
+      myChart4.draw(1000);
+    	
+  </script>
+</div>
+
+
+
+
+<!--5) Relation between passengers' booking class and port of embarkation...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg5 = dimple.newSvg("#chartContainer", 590, 400);    
+	var data5 = [
+	{"Pclass" : 1, "Embarked": "C", "Passengers" : 85	},
+	{"Pclass" : 1, "Embarked": "Q", "Passengers" : 2	},
+	{"Pclass" : 1, "Embarked": "S", "Passengers" : 127	},
+	{"Pclass" : 2, "Embarked": "C", "Passengers" : 17	},
+	{"Pclass" : 2, "Embarked": "Q", "Passengers" : 3	},
+	{"Pclass" : 2, "Embarked": "S", "Passengers" : 164	},
+	{"Pclass" : 3, "Embarked": "C", "Passengers" : 66	},
+	{"Pclass" : 3, "Embarked": "Q", "Passengers" : 72	},
+	{"Pclass" : 3, "Embarked": "S", "Passengers" : 353	},
+	];  
+	
+      var myChart5 = new dimple.chart(svg5, data5);
+      myChart5.setBounds(60, 30, 510, 330)
+      myChart5.addCategoryAxis("x", ["Pclass"]);
+      myChart5.addMeasureAxis("y", "Passengers");
+      myChart5.addSeries("Embarked", dimple.plot.bar);
+      myChart5.addLegend(65, 10, 510, 20, "right");
+	  myChart5.ease = "bounce";
+	  myChart5.staggerDraw = true;
+      myChart5.draw(1000);
+    	
+  </script>
+</div>
+
+
+
+
+<!--6) Relation between passengers' sex and port of embarkation...-->
+
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg6 = dimple.newSvg("#chartContainer", 590, 400);    
+	var data6 = [
+	{"Sex" : "female", "Embarked": "C", "Passengers" : 73	},
+	{"Sex" : "female", "Embarked": "Q", "Passengers" : 36	},
+	{"Sex" : "female", "Embarked": "S", "Passengers" : 203	},
+	{"Sex" : "male", "Embarked": "C", "Passengers" : 95	},
+	{"Sex" : "male", "Embarked": "Q", "Passengers" : 41	},
+	{"Sex" : "male", "Embarked": "S", "Passengers" : 441	},
+	]; 
+		
+      var myChart6 = new dimple.chart(svg6, data6);
+      myChart6.setBounds(60, 30, 510, 330)
+      myChart6.addCategoryAxis("x", ["Embarked"]);
+      myChart6.addMeasureAxis("y", "Passengers");
+      myChart6.addSeries("Sex", dimple.plot.bar);
+      myChart6.addLegend(65, 10, 510, 20, "right");
+	  myChart6.ease = "bounce";
+	  myChart6.staggerDraw = true;
+      myChart6.draw(1000);
+    
+  </script>
+</div>
+
+
+
+
+
+</body>
+</html>
