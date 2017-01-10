@@ -54,7 +54,7 @@ Please hover over specific charts to see the data
 <!--Creating the chart -->	
   <script type="text/javascript">
     var svg = dimple.newSvg("#chartContainer", 790, 600);
-    d3.tsv("https://docs.google.com/spreadsheets/d/1kQJ-hya_3z86WZs_tQBmLCmt5r8NOkz6yLjjj5gD5e0/pub?gid=0&single=true&output=tsv", function (data) {
+    d3.tsv("titanic_dataset.tsv", function (data) {
       var myChart = new dimple.chart(svg, data);
       myChart.setBounds(95, 25, 675, 535)
       myChart.addCategoryAxis("x", "Pclass");
