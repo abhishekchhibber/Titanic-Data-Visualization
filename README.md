@@ -2,6 +2,13 @@
 _Visualization of Titanic Dataset_
 
 ## Summary
+
+### About Titanic
+
+_RMS Titanic, during her maiden voyage on April 15, 1912, sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. The tragedy is considered one of the most infamous shipwrecks in history and led to better safety guidelines for ships._
+
+In this visualization, I have considered a dataset with details of only 891 passengers.
+
 In this project, I have tried to analyze the Titanic dataset, based on the following categorical features:
 * Survived: 1 = Yes, 0= No
 * Pclass (Passenger Class): 1,2,3
@@ -47,6 +54,18 @@ _"It’s a bit blunt. Add something to tell the reader/viewer what they should b
 
 **Feedback 3:**
 _"There is a lot of ambiguity. Can you write something for the reader to understand? Use different charts or colors, or club some of the charts together to make it more meaningful."_ 
+
+## Summary
+
+**Key findings from the dataset:
+
+* Overall, 65% of the passengers were males, while 35% were females
+* There were 44% females in I-class, but only 29% in III-class
+* 74% of the females survived, as compared to only 19% of the males 
+* Overall, the survival rate was 38%
+* While 63% of I-Class passengers survived, only 24% from III-Class could make it.
+* 94% of the passengers embarking from Queenstown reserved III-class, while 51% of the passengers embarking from Cherbourg reserved I-class
+
 
 ## Further Exploration
 I wanted to explore the data using a Chord Diagram. Therefore, I used d3.js and viz.js to create another visualization using a chord diagram. I used Python code to create a list of lists with all the different combinations of features as well as their sub features. Thereafter, I used an existing template of chord diagram and used it to create my visualization. 
