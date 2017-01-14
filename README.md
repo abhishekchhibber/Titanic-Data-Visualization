@@ -57,7 +57,7 @@ _"There is a lot of ambiguity. Can you write something for the reader to underst
 
 ## Summary
 
-**Key findings from the dataset:
+**Key findings from the dataset:**
 
 * Overall, 65% of the passengers were males, while 35% were females
 * There were 44% females in I-class, but only 29% in III-class
