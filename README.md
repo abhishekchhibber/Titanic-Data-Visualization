@@ -59,12 +59,7 @@ _"There is a lot of ambiguity. Can you write something for the reader to underst
 
 **Key findings from the dataset:**
 
-* Overall, 65% of the passengers were males, while 35% were females
-* There were 44% females in I-class, but only 29% in III-class
-* 74% of the females survived, as compared to only 19% of the males 
-* Overall, the survival rate was 38%
-* While 63% of I-Class passengers survived, only 24% from III-Class could make it.
-* 94% of the passengers embarking from Queenstown reserved III-class, while 51% of the passengers embarking from Cherbourg reserved I-class
+* More males and females survived from Class-I, than Class-II and Class-III*
 
 
 ## Further Exploration
