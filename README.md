@@ -59,7 +59,7 @@ _"There is a lot of ambiguity. Can you write something for the reader to underst
 
 **Key findings from the dataset:**
 
-* More males and females survived from Class-I, than Class-II and Class-III*
+* More males and females survived from Class-I, than Class-II and Class-III
 
 
 ## Further Exploration
