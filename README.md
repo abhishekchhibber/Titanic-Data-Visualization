@@ -13,9 +13,15 @@ In this project, I have tried to analyze the Titanic dataset, based on the follo
 * Survived: 1 = Yes, 0= No
 * Pclass (Passenger Class): 1,2,3
 * Sex: Male, Female
-* Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampton
+
 
 I have tried to understand the relationship among all the four categorical features. [Link to the dataset](https://www.udacity.com/api/nodes/5420148578/supplemental_media/titanic-datacsv/download) 
+
+## Summary
+
+**Key finding from the dataset:**
+
+* More males and females survived from Class-I, than Class-II and Class-III
 
 
 
@@ -54,12 +60,6 @@ _"It’s a bit blunt. Add something to tell the reader/viewer what they should b
 
 **Feedback 3:**
 _"There is a lot of ambiguity. Can you write something for the reader to understand? Use different charts or colors, or club some of the charts together to make it more meaningful."_ 
-
-## Summary
-
-**Key findings from the dataset:**
-
-* More males and females survived from Class-I, than Class-II and Class-III
 
 
 ## Further Exploration
